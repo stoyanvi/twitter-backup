@@ -1,0 +1,29 @@
+<div data-role="view" id="share" data-layout="default" data-transition="overlay:down" class="share-view"
+     data-init="twitterBackup.viewModels.manageFavorites.init"
+     data-show="twitterBackup.viewModels.manageFavorites.show"
+     data-model="twitterBackup.viewModels.manageFavorites">
+    
+    <header data-role="header">
+        <div data-role="navbar">
+            <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            <input type="search" id="searchTwitterUser" placeholder="Twitter Username">
+            <a data-role="button" data-align="right" data-icon="search" data-bind="click: search"></a>
+        </div>
+    </header>
+
+    <ul id="favoritesResultsListview" data-style="inset" data-role="listview"></ul>
+
+    <p id="no-results-span" hidden="hidden" class="no-items-msg">
+        <strong>No results.</strong>
+    </p>
+
+</div>
+
+<script type="text/x-kendo-template" id="searchUsersTemplate">
+    <img src="${Avatar}" class="twitter-avatar">
+    <h3 class="twitter-name">${Name}</h3>
+    <small>${ScreenName}</small>
+    #if (Saved()) {# <small style="color: green;">Saved</small> #} else {# <small style="color: red;">Not Saved</small> #}#
+    #if (!Saved()) {# <a data-role="button" class="custom-icon" data-align="right" data-icon="add" data-click="twitterBackup.viewModels.manageFavorites.save"></a> #}#
+    
+</script>

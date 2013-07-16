@@ -1,0 +1,32 @@
+<div data-role="view" id="twitterTweets" data-layout="default"
+     data-init="twitterBackup.viewModels.tweets.init"
+     data-show="twitterBackup.viewModels.tweets.show"
+     data-model="twitterBackup.viewModels.tweets">
+    <header data-role="header">
+        <div id="tweets-navbar" data-role="navbar">
+            <span data-role="view-title"></span>
+            <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            <a class="nav-button" data-align="right" data-role="button" data-icon="add" href="views/addTweetView.html"></a>
+        </div>
+    </header>
+
+    <ul id="tweets-listview"
+        data-style="inset"
+        data-role="listview"
+        data-template="tweetsTemplate"
+        data-bind="source: tweets"></ul>
+
+    <p id="no-tweets-span" hidden="hidden" class="no-items-msg">
+        <b>You haven't saved tweets for this user.</b><br><br>
+        Tap on the plus sign to retrieve user tweets.
+    </p>
+
+</div>
+
+<script type="text/x-kendo-template" id="tweetsTemplate">
+    <img src="${Avatar()}" class="twitter-avatar">
+    <h3 class="twitter-name">${Name()}</h3>
+    <small class="twitter-screen-name">${ScreenName()}</small>
+    <p class="tweet-text">${Text}</p>
+    <a data-role="button" class="custom-icon" data-align="right" data-icon="trash" data-click="twitterBackup.viewModels.manageTweets.remove"></a>
+</script>

@@ -1,0 +1,29 @@
+<div data-role="view" id="share" data-layout="default" data-transition="overlay:down" class="share-view"
+     data-init="twitterBackup.viewModels.manageTweets.init"
+     data-show="twitterBackup.viewModels.manageTweets.show"
+     data-model="twitterBackup.viewModels.manageTweets">
+    
+    <header data-role="header">
+        <div id="tweets-results-navbar" data-role="navbar">
+            <span data-role="view-title"></span>
+            <a class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            <a data-role="button" data-align="right" data-icon="refresh" data-bind="click: fetch"></a>
+        </div>
+    </header>
+
+    <ul id="tweetsResultsListview" data-style="inset" data-role="listview"></ul>
+
+    <p id="no-tweets-results-span" hidden="hidden" class="no-items-msg">
+        <strong>No results.</strong>
+    </p>
+
+</div>
+
+<script type="text/x-kendo-template" id="fetchTweetsTemplate">
+    <img src="${Avatar()}" class="twitter-avatar">
+    <h3 class="twitter-name">${Name()}</h3>
+    <small class="twitter-screen-name">${ScreenName()}</small>
+    <p class="tweet-text">${Text}</p>
+    #if (Saved()) {# <small style="color: green;">Saved</small> #} else {# <small style="color: red;">Not Saved</small> #}#
+    #if (!Saved()) {# <a data-role="button" class="custom-icon" data-align="right" data-icon="favorites" data-click="twitterBackup.viewModels.manageTweets.save"></a> #}#
+</script>

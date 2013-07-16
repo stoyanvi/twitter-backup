@@ -1,0 +1,428 @@
+@font-face {
+    font-family: "icons-twitter_backup";
+    src: url("images/icons-twitter_backup.woff") format("woff"),
+         url("images/icons-twitter_backup.ttf") format("truetype");
+}
+
+#twitterBackupApp.km-android .km-view {
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+#twitterBackupApp.km-ios, .km-ios .km-content {
+  color: #666;
+}
+
+#twitterBackupApp.km-ios,
+#twitterBackupApp.km-android,
+#twitterBackupApp.km-ios .km-list > li {
+  font-weight: normal;
+  background-color: #fff;
+}
+
+#twitterBackupApp.km-ios .km-listinset,
+#twitterBackupApp.km-ios .km-listgroupinset .km-list {
+  border: 0;
+}
+#twitterBackupApp.km-ios,
+#twitterBackupApp.km-ios .km-content,
+#twitterBackupApp.km-android,
+#twitterBackupApp.km-android .km-content {
+  background-image: none;
+  background-color: #f5f5f5;
+  border-bottom: 2px solid #00acee;
+}
+
+#twitterBackupApp.km-ios .form-view .km-listinset,
+#twitterBackupApp.km-android .form-view .km-listinset {
+  border-radius: .5em;
+   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); 
+}
+
+#twitterBackupApp.km-android .km-listview-link::after,
+#twitterBackupApp.km-android .km-listview-label::after {
+  display: block;
+  border-color: rgba(255, 255, 255, .5);
+}
+
+/*** Buttons ***/
+
+#twitterBackupApp.km-android .km-leftitem {
+  left: 0;
+}
+
+#twitterBackupApp.km-android .km-rightitem {
+  right: 0;
+}
+
+#twitterBackupApp.km-ios .km-button,
+#twitterBackupApp.km-android .km-button {
+  background-color: #00acee;
+}
+
+#twitterBackupApp.km-ios .km-button,
+#twitterBackupApp.km-ios .km-back::before {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: 0;
+}
+
+#twitterBackupApp.km-ios .km-back::after {
+  background-image: none;
+}
+
+#twitterBackupApp.km-ios .km-back,
+#twitterBackupApp.km-android .km-back {
+  /*background-color: #da4b39;*/
+}
+
+#twitterBackupApp.km-ios .km-back.logout-btn,
+#twitterBackupApp.km-android .km-back.logout-btn {
+  background-color: #d94a38;
+}
+
+#twitterBackupApp.km-ios .km-back {
+  border-top: 0;
+}
+
+#twitterBackupApp.km-ios .km-back::before {
+  left: -.34em;
+  top: .18em;
+  height: .92em;
+  border-bottom-color: #da4b39;
+}
+
+#twitterBackupApp.km-android .km-button {
+  color: #fff;
+}
+
+#twitterBackupApp.km-android .km-navbar .km-button {
+  height: 1.6em;
+}
+
+.km-button.btn-big {
+  font-size: 1.2em;
+  font-weight: 400;
+  min-width: 7em;
+  padding: .5em;
+}
+
+#twitterBackupApp.km-ios .welcome-scrn .btn-signup,
+#twitterBackupApp.km-android .welcome-scrn .btn-signup {
+  background-color: #272727;
+}
+
+.btn-login::before,
+.btn-signup::before,
+.btn-login-fb::before {
+  display: block;
+  content: " ";
+  width: 1em;
+  height: 1em;
+  position: absolute;
+  top: .6em;
+
+  background-image:url(images/sprite.png);
+  background-repeat:no-repeat;
+  background-size:3em auto;
+  background-color:transparent;
+  background-position:-100px -100px;
+}
+
+.btn-login::before {
+  background-position: 0 -3em;
+}
+
+.btn-login-fb::before {
+  background-position: 0 -13.9em;
+}
+
+.btn-signup::before {
+  background-position: 0 -4.3em;
+}
+
+.btn-login-fb {
+  background-color: #165396!important;
+}
+
+.sngl-btn-wrp {
+  text-align: center;
+  margin: 2em 1em;
+}
+
+/*** Icons ***/
+
+.km-icon:after,
+.km-icon:before {
+  font: 1em/1em 'icons-twitter_backup';
+}
+
+.km-ios .km-button .km-icon::after,
+.km-ios .km-button .km-icon::before,
+.km-ios .km-button.km-state-active .km-icon::after,
+.km-ios .km-button.km-state-active .km-icon::before {
+  margin-left: 2px;
+}
+
+.km-ios .km-button.custom .km-icon::after,
+.km-ios .km-button.custom .km-icon::before,
+.km-ios .km-button.custom.km-state-active .km-icon::after,
+.km-ios .km-button.custom.km-state-active .km-icon::before {
+  margin: 0;
+}
+
+.km-add:after,
+.km-add:before {
+  content: '\e801';
+}
+
+.km-trash:after,
+.km-delete:after,
+.km-trash:before,
+.km-delete:before {
+  content: '\e802';
+}
+
+.km-search:after,
+.km-search:before {
+  content: '\e804';
+}
+
+.km-toprated:after,
+.km-favorites:after,
+.km-toprated:before,
+.km-favorites:before {
+  content: '\e803';
+}
+
+.km-refresh:after,
+.km-refresh:before {
+  content: '\e805';
+}
+
+#twitterBackupApp.km-ios .km-listinset .km-button.custom-icon,
+#twitterBackupApp.km-ios .km-listgroupinset .km-list .km-button.custom-icon {
+  position: absolute;
+  right: .6em;
+  top: 1.6em;
+  margin-top: -1em;
+  padding: .15em;
+}
+
+/*** App Header ***/
+
+#twitterBackupApp.km-ios .km-navbar {
+  background-image: none;
+  background-color: #3a3a3a;
+  border-bottom: 1px solid #292929;
+}
+
+#twitterBackupApp.km-ios .km-view-title {
+  font-weight: normal;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+#twitterBackupApp.km-android .km-view-title {
+  display: block;
+  visibility: visible;
+  margin: 0;
+  padding: .5em 1em;
+  font-size: 1.4rem;
+  font-weight: normal;
+  background-color: #222;
+  border-bottom: 2px solid #fe8a3d;
+  line-height: 1.2;
+}
+
+.km-root #twitterBackupApp.km-android .km-navbar {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+#twitterBackupApp.km-android .km-navbar .km-icon {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#twitterBackupApp.km-android .km-navbar {
+  background-color: #272727;
+}
+
+#twitterBackupApp.km-android .km-rightitem .km-button {
+  background-color: #e45600;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+/*** App Footer ***/
+
+.welcome-scrn .km-footer {
+  padding: 1em 0;
+  font-size: .7em;
+  text-align: center;
+  color: #999;
+}
+
+#twitterBackupApp.km-ios .welcome-scrn .km-footer {
+  background-color: #3a3a3a;
+  border-top: 1px solid #292929;
+}
+
+#twitterBackupApp.km-android .welcome-scrn .km-footer {
+  position: absolute;
+  bottom: 0;
+  background-color: #272727;
+}
+
+/*** Welcome screen ***/
+
+.welcome-scrn .app-name {
+  margin: 4em 0 1.5em;
+  text-align: center;
+}
+
+.welcome-scrn .app-name b {
+  display: block;
+  font-size: 1.5em;
+  text-shadow: 0 1px 0 #fff;
+  color: #00acee;
+}
+
+.welcome-scrn .app-name small {
+  display: block;
+  font-size: .75em;
+  color: #888;
+}
+
+.welcome-scrn .group-wrp {
+  margin: 1.5em 2em 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.welcome-scrn .group-wrp li {
+  display: inline-block;
+  margin: 1.5em 0 0;
+  padding: 1.5em 0 0;    
+}
+
+.welcome-scrn .group-wrp li:first-child {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/*** Forms ***/
+
+#twitterBackupApp.km-android .form-view .km-list > li,
+#twitterBackupApp.km-ios .form-view .km-list > li {
+  padding: 0;
+}
+
+.form-view .km-listview label {
+  padding: .5rem 1rem;
+  display: inline-block;
+  vertical-align: top;
+  width: 40%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  font-size: 1.1rem;
+}
+
+#twitterBackupApp.km-ios .form-view .km-listview label {
+  background-color: #F4F4F4;
+  border-right: 1px solid #e0dfdf;
+  font-weight: bold;
+}
+
+#twitterBackupApp.km-android .form-view .km-listview label {
+  background-color: #323232;
+  border-right: 1px solid #404040;
+}
+
+.form-view .km-listview .txtarea-wrp label {
+  height: 7rem;
+}
+
+#twitterBackupApp.km-ios .form-view .km-listview input {
+
+}
+
+.km-list input[type="password"],
+.km-list input[type="search"],
+.km-list input[type="number"],
+.km-list input[type="tel"],
+.km-list input[type="url"],
+.km-list input[type="email"],
+.km-list input[type="text"]:not(.k-input),
+.km-list input[type="month"],
+.km-list input[type="color"],
+.km-list input[type="week"],
+.km-list input[type="date"],
+.km-list input[type="time"],
+.km-list input[type="datetime"],
+.km-list select:not([multiple]),
+.km-list .k-dropdown,
+.km-list textarea {
+  width: 56%;
+}
+
+#twitterBackupApp.km-ios .km-list input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button),
+#twitterBackupApp.km-ios .km-list select:not([multiple]),
+#twitterBackupApp.km-ios .km-list .k-dropdown-wrap,
+#twitterBackupApp.km-ios .km-list textarea {
+  color: #666;
+}
+
+#twitterBackupApp.km-android .km-list input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="image"]):not([type="checkbox"]):not([type="radio"]):not(.k-input):not(.k-button),
+#twitterBackupApp.km-android .km-list select:not([multiple]),
+#twitterBackupApp.km-android .km-list .k-dropdown-wrap,
+#twitterBackupApp.km-android textarea {
+  color: #ccc;
+  background-image: none;
+  border-bottom: 0;
+}
+
+.validation,
+.k-invalid-msg {
+  display: none;
+  margin: 1rem 0 0;
+  padding: 0 1rem;
+  color: #f00;
+}
+
+.share-form-wrp,
+.user-status-wrp,
+.take-avatar-wrp {
+  margin: 1rem;
+}
+
+/*** List View ***/
+
+#twitterBackupApp .twitter-avatar {
+  float: left;
+  margin: 0 1em .5em 0;
+  border-radius: .5em;
+}
+
+#twitterBackupApp .twitter-name {
+  margin: 0 3.5em 0 0;
+  line-height: 1.4em;
+}
+
+#twitterBackupApp .twitter-screen-name {
+  font-size: .75em;
+  color: #666;
+}
+
+#twitterBackupApp .tweet-text {
+  margin: 1em 0 0;
+}

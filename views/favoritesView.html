@@ -1,0 +1,30 @@
+<div data-role="view" id="view-all-favorites" data-layout="default" class="favorites-view"
+     data-model="twitterBackup.viewModels.favorites">
+
+    <header data-role="header">
+        <div data-role="navbar">
+            Favorites
+            <a class="nav-button logout-btn" data-align="left" data-role="backbutton" data-click="twitterBackup.viewModels.favorites.logout">Log out</a>
+            <a class="nav-button" data-align="right" data-role="button" data-icon="add" href="views/addFavoriteView.html"></a>
+        </div>
+    </header>
+
+    <ul id="favorites-listview" data-style="inset" data-role="listview"
+        data-template="favoritesTemplate"
+        data-bind="source: favorites"></ul>
+
+    <p id="no-favorites-span" hidden="hidden" class="no-items-msg">
+        <b>You haven't added favorites yet.</b><br><br>
+        Tap on the plus sign to search for twitter user.
+    </p>
+
+</div>
+
+<script type="text/x-kendo-template" id="favoritesTemplate">
+    <div data-role="touch" data-bind="events: { tap: favoriteSelected }">
+        <img src="${Avatar}" class="twitter-avatar">
+        <h3 class="twitter-name">${Name}</h3>
+        <small class="twitter-screen-name">${ScreenName}</small>
+    </div>
+    <a data-role="button" class="custom-icon" data-align="right" data-icon="delete" data-click="twitterBackup.viewModels.manageFavorites.remove"></a>
+</script>
